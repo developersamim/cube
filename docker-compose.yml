@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  temperature.api:
+    image: ${DOCKER_REGISTRY-}temperature
+    build:
+      context: .
+      dockerfile: services/Temperature.API/Dockerfile
+
+  angularapp:
+    image: ${DOCKER_REGISTRY-}angularapp
+    build:
+      context: .
+      dockerfile: webapps/AngularApp/Dockerfile
+

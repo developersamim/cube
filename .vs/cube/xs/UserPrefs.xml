@@ -1,0 +1,43 @@
+﻿<Properties StartupConfiguration="{46E7D156-B410-482D-8E4A-4B4657826F12}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="services/Temperature.API/Startup.cs">
+    <Files>
+      <File FileName="services/Temperature.API/Properties/launchSettings.json" Line="22" Column="35" />
+      <File FileName="services/Temperature.API/Dockerfile" Line="1" Column="1" />
+      <File FileName="webapps/AngularApp/Dockerfile" Line="9" Column="19" />
+      <File FileName="docker-compose.yml" Line="1" Column="1" />
+      <File FileName="docker-compose.override.yml" Line="5" Column="36" />
+      <File FileName="webapps/AngularApp/Startup.cs" Line="71" Column="21" />
+      <File FileName="webapps/AngularApp/AngularApp.csproj" Line="1" Column="1" />
+      <File FileName="services/Temperature.API/Startup.cs" Line="47" Column="15" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="cube" expanded="True">
+            <Node name="services" expanded="True">
+              <Node name="Temperature.API" expanded="True">
+                <Node name="Properties" expanded="True" />
+                <Node name="Startup.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="webapps" expanded="True">
+              <Node name="AngularApp" expanded="True" />
+            </Node>
+            <Node name="docker-compose" expanded="True">
+              <Node name="docker-compose.yml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.webapps.AngularApp PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.services.Temperature.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
