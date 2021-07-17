@@ -1,8 +1,41 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <!--<OutputType>Exe</OutputType>-->
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Contracts\" />
+    <None Remove="Features\" />
+    <None Remove="Behaviors\" />
+    <None Remove="Features\Converter\" />
+    <None Remove="Features\Converter\Commands\" />
+    <None Remove="Features\Converter\Commands\CentigradeToFahrenheitCommand\" />
+    <None Remove="Features\Converter\Commands\CentigradeToKelvinCommand\" />
+    <None Remove="Features\Converter\Commands\FahrenheitToCentigrade\" />
+    <None Remove="Features\Converter\Commands\FahrenheitToKelvin\" />
+    <None Remove="Features\Converter\Commands\KelvinToCentigrade\" />
+    <None Remove="Features\Converter\Commands\KelvinToFahrenheit\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Contracts\" />
+    <Folder Include="Features\" />
+    <Folder Include="Behaviors\" />
+    <Folder Include="Features\Converter\" />
+    <Folder Include="Features\Converter\Commands\" />
+    <Folder Include="Features\Converter\Commands\CentigradeToFahrenheit\" />
+    <Folder Include="Features\Converter\Commands\CentigradeToKelvin\" />
+    <Folder Include="Features\Converter\Commands\FahrenheitToCentigrade\" />
+    <Folder Include="Features\Converter\Commands\FahrenheitToKelvin\" />
+    <Folder Include="Features\Converter\Commands\KelvinToCentigrade\" />
+    <Folder Include="Features\Converter\Commands\KelvinToFahrenheit\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="10.3.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.3.0" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+  </ItemGroup>
 </Project>
