@@ -49,6 +49,7 @@ export class ConverterComponent implements OnInit {
   }
 
   onSubmit(){
+    debugger;
     var request = this.converterForm.get('request')?.value;
 
     if(this.selectedFrom == this.centigrade && this.selectedTo == this.fahrenheit){
@@ -127,12 +128,30 @@ export class ConverterComponent implements OnInit {
   {
     this.selectedFrom = this.converterForm.get('from')?.value;
     this.resetRequestAndResult();
+
+    if(this.selectedFrom == this.selectedTo){
+      this.options.forEach(element => {
+        if(element != this.selectedTo){
+          this.converterForm.controls['to'].setValue(element);
+          this.selectedTo = element;
+        }
+      });
+    }
   }
 
   onToChange()
   {
     this.selectedTo = this.converterForm.get('to')?.value;
     this.resetResult();
+
+    if(this.selectedFrom == this.selectedTo){
+      this.options.forEach(element => {
+        if(element != this.selectedFrom){
+          this.converterForm.controls['from'].setValue(element);
+          this.selectedFrom = element;
+        }
+      });
+    }
   }
 
   resetRequestAndResult()
