@@ -1,1 +1,121 @@
-<p>converter works!</p>
+<div class="container">
+  <form [formGroup]="converterForm" (ngSubmit)="onSubmit()">
+
+    <div class="mb-3 row">
+      <div class="col-sm-3">
+        <select
+        class="custom-select d-block w-100"
+        formControlName="from"
+        (change)="onFromChange()">
+        <option
+          *ngFor="let option of options; let i = index"
+          [value]="option">
+          {{option}}
+        </option>
+      </select>
+      </div>
+      <label
+        for="requestedValue"
+        class="col-sm-1 col-form-label text-center">
+        to
+      </label>
+      <div class="col-sm-3">
+        <select
+        class="custom-select d-block w-100"
+        formControlName="to"
+        (change)="onToChange()">
+        <option
+          *ngFor="let option of options; let i = index"
+          [value]="option">
+          {{option}}
+        </option>
+      </select>
+      </div>
+      <label
+        for="requestedValue"
+        class="col-sm-1 col-form-label text-center">
+        <b>Calculator</b>
+      </label>
+    </div>
+
+
+
+
+
+  <!-- <div class="row">
+
+    <div class="col-md-3 mb-3">
+
+      <label for="country">From</label>
+
+      <select
+        class="custom-select d-block w-100"
+        formControlName="from"
+        (change)="onFromChange()">
+        <option
+          *ngFor="let option of options; let i = index"
+          [value]="option">
+          {{option}}
+        </option>
+      </select>
+    </div>
+
+    <div class="col-md-1">to</div>
+
+    <div class="col-md-3 mb-3">
+
+      <label for="country">To</label>
+
+      <select
+        class="custom-select d-block w-100"
+        formControlName="to"
+        (change)="onToChange">
+        <option
+          *ngFor="let option of options; let i = index"
+          [value]="option">
+          {{option}}
+        </option>
+      </select>
+    </div>
+
+    <div class="col-md-1">calculator</div>
+
+  </div> -->
+  <div class="col-md-8 resultWrapper">
+  <div class="mb-3 row text-center">
+    <label
+      for="requestedValue"
+      class="col-sm-2 offset-md-2 col-form-label">
+      {{selectedFrom}}:
+    </label>
+    <div class="col-sm-4">
+      <input
+        type="number"
+        class="form-control"
+        id="requestedValue"
+        value="0"
+        formControlName="requestedValue">
+    </div>
+  </div>
+
+  <div class="mb-3 row text-center">
+
+    <label
+      for="retrievedValue"
+      class="col-sm-2 offset-md-2 col-form-label">
+      {{selectedTo}}:
+    </label>
+
+    <div class="col-sm-4">
+      <input
+        type="number"
+        class="form-control-plaintext text-center"
+        id="retrievedValue"
+        value="0"
+        formControlName="retrievedValue">
+    </div>
+  </div>
+</div>
+</form>
+</div>
+
