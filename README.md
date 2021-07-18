@@ -3,6 +3,7 @@ technical test
 
 # Introduction
 Webapi: In dotnet 5, implemented autonomous microservice, clean architecture, CQRS pattern, mediatR.
+
 Angular: Angular 12.0.1
 Docker: Have dockerize both of the above application with docker-compose
 
