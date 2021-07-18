@@ -49,7 +49,6 @@ export class ConverterComponent implements OnInit {
   }
 
   onSubmit(){
-    debugger;
     var request = this.converterForm.get('request')?.value;
 
     if(this.selectedFrom == this.centigrade && this.selectedTo == this.fahrenheit){

@@ -34,7 +34,6 @@ export class ConverterService {
   }
 
   fahrenheitToKelvin = (request: number) => {
-    debugger;
     return this.httpClient.get(this.apiEndpoint + this.controllerUrl + this.fahrenheitToKelvinAction + request);
   }
 
