@@ -13,10 +13,12 @@ Make sure you have installed and configured docker in your environment.
 
 Step 1:
 Go to folder /webapps/AngularApp/ClientApp, then run 
+
 npm install
 
 Step 2:
 From root directory, run below command
+
 docker-compose -f docker-compose.yml -f docker-compose.override.yml up --build
 
 # Screenshots
