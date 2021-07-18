@@ -2,14 +2,21 @@
 technical test
 
 # Introduction
-Webapi: In dotnet 5, implemented autonomous microservice, clean architecture, CQRS pattern, mediatR.
+Webapi: In dotnet 5, implemented autonomous microservice, clean architecture, CQRS pattern, mediatR, webapi running on http://localhost:5000
 
-Angular: Angular 12.0.1
+Angular: Angular 12.0.1, Node: 14.17, app running on http://localhost:4200
+
 Docker: Have dockerize both of the above application with docker-compose
 
 # Start local docker env (or run project)
-Make sure you have installed and configured docker in your environment. After that, you can run below commands from root directory.
+Make sure you have installed and configured docker in your environment.
 
+Step 1:
+Go to folder /webapps/AngularApp/ClientApp, then run 
+npm install
+
+Step 2:
+From root directory, run below command
 docker-compose -f docker-compose.yml -f docker-compose.override.yml up --build
 
 # Screenshots
