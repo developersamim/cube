@@ -20,22 +20,18 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Contracts\" />
-    <Folder Include="Features\" />
     <Folder Include="Behaviors\" />
-    <Folder Include="Features\Converter\" />
-    <Folder Include="Features\Converter\Commands\" />
-    <Folder Include="Features\Converter\Commands\CentigradeToFahrenheit\" />
-    <Folder Include="Features\Converter\Commands\CentigradeToKelvin\" />
-    <Folder Include="Features\Converter\Commands\FahrenheitToCentigrade\" />
-    <Folder Include="Features\Converter\Commands\FahrenheitToKelvin\" />
-    <Folder Include="Features\Converter\Commands\KelvinToCentigrade\" />
-    <Folder Include="Features\Converter\Commands\KelvinToFahrenheit\" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
     <PackageReference Include="FluentValidation" Version="10.3.0" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.3.0" />
     <PackageReference Include="MediatR" Version="9.0.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Temperature.Core\Temperature.Core.csproj" />
   </ItemGroup>
 </Project>

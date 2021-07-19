@@ -4,12 +4,12 @@ using System.Threading.Tasks;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using Temperature.API.Utilities;
-using Temperature.Application.Features.Converter.Commands.CentigradeToFahrenheit;
-using Temperature.Application.Features.Converter.Commands.CentigradeToKelvin;
-using Temperature.Application.Features.Converter.Commands.FahrenheitToCentigrade;
-using Temperature.Application.Features.Converter.Commands.FahrenheitToKelvin;
-using Temperature.Application.Features.Converter.Commands.KelvinToCentigrade;
-using Temperature.Application.Features.Converter.Commands.KelvinToFahrenheit;
+using Temperature.Application.Features.Converter.Commands.Centigrade.CentigradeToFahrenheit;
+using Temperature.Application.Features.Converter.Commands.Centigrade.CentigradeToKelvin;
+using Temperature.Application.Features.Converter.Commands.Fahrenheit.FahrenheitToCentigrade;
+using Temperature.Application.Features.Converter.Commands.Fahrenheit.FahrenheitToKelvin;
+using Temperature.Application.Features.Converter.Commands.Kelvin.KelvinToCentigrade;
+using Temperature.Application.Features.Converter.Commands.Kelvin.KelvinToFahrenheit;
 
 namespace Temperature.API.Services
 {
@@ -30,7 +30,7 @@ namespace Temperature.API.Services
 
             var result = await mediator.Send(command);
 
-            return Helper.ToTwoPointDecimal(result);
+            return Helper.ToTwoPointDecimal(result.Value);
         }
 
         public async Task<double> CentigradeToKelvin(double request)
@@ -39,7 +39,7 @@ namespace Temperature.API.Services
 
             var result = await mediator.Send(command);
 
-            return Helper.ToTwoPointDecimal(result);
+            return Helper.ToTwoPointDecimal(result.Value);
         }
 
         public async Task<double> FahrenheitToCentigrade(double request)
@@ -48,7 +48,7 @@ namespace Temperature.API.Services
 
             var result = await mediator.Send(command);
 
-            return Helper.ToTwoPointDecimal(result);
+            return Helper.ToTwoPointDecimal(result.Value);
         }
 
         public async Task<double> FahrenheitToKelvin(double request)
@@ -57,7 +57,7 @@ namespace Temperature.API.Services
 
             var result = await mediator.Send(command);
 
-            return Helper.ToTwoPointDecimal(result);
+            return Helper.ToTwoPointDecimal(result.Value);
         }
 
         public async Task<double> KelvinToCentigrade(double request)
@@ -66,7 +66,7 @@ namespace Temperature.API.Services
 
             var result = await mediator.Send(command);
 
-            return Helper.ToTwoPointDecimal(result);
+            return Helper.ToTwoPointDecimal(result.Value);
         }
 
         public async Task<double> KelvinToFahrenheit(double request)
@@ -75,7 +75,7 @@ namespace Temperature.API.Services
 
             var result = await mediator.Send(command);
 
-            return Helper.ToTwoPointDecimal(result);
+            return Helper.ToTwoPointDecimal(result.Value);
         }
     }
 }
